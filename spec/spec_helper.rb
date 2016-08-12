@@ -55,7 +55,7 @@ RSpec.configure do |config|
   end
 
   config.after (:each) do |test|
-    session_id = @browser.session_id
+    session_id = @driver.session_id
     @driver.quit
 
     if test.exception
