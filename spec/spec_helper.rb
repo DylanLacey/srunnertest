@@ -59,9 +59,9 @@ RSpec.configure do |config|
     @driver.quit
 
     if test.exception
-      SauceWhisk::Jobs.fail_job sessionid
+      SauceWhisk::Jobs.fail_job session_id
     else
-      SauceWhisk::Jobs.pass_job sessionid
+      SauceWhisk::Jobs.pass_job session_id
     end
   end
 
