@@ -50,7 +50,7 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   config.before (:each) do |test|
-    @driver = Selenium::WebDriver.for :firefox
+    @driver = Selenium::WebDriver.for :remote, :desired_capabilities => {}, :url => "http://selenium_grid:80/wd/hub"
   end
 
   config.after (:each) do |test|
